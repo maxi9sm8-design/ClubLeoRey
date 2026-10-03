@@ -6,7 +6,7 @@ public class Socio {
     private double cuotaBase;
 
     /**
-     * Constructor por defecto (sobrecarga).
+     * Constructor por defecto (sobrecarga)
      */
     public Socio() {
         this.rut = "";
@@ -16,7 +16,7 @@ public class Socio {
     }
 
     /**
-     * Constructor con parametros.
+     * Constructor con parametros
      *
      * @param rut       RUT del socio
      * @param nombre    nombre del socio
@@ -87,8 +87,8 @@ public class Socio {
     }
 
     /**
-     * Calcula la cuota final. En la clase base es igual a la cuota base;
-     * las subclases la sobrescriben.
+     * Calcula la cuota final
+     * las subclases la sobrescriben
      *
      * @return la cuota final calculada
      */
@@ -97,7 +97,7 @@ public class Socio {
     }
 
     /**
-     * Entrega un resumen con los datos del socio.
+     * Entrega un resumen con los datos del socio
      *
      * @return cadena con los datos del socio
      */
