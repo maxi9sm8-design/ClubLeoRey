@@ -20,7 +20,6 @@ import java.awt.event.WindowEvent;
  * Docente: Javiera Jaldin.
  *
  * @author Ignacio San Martin, Jorge Bazan
- * @version 1.0
  */
 public class ClubLeoRey extends Frame implements ActionListener {
 
