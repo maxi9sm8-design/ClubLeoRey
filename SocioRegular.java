@@ -3,7 +3,7 @@ public class SocioRegular extends Socio {
     private double descuentoPase;
 
     /**
-     * Constructor que inicializa la clase padre con super(...).
+     * Constructor que inicializa la clase padre con super(...)
      *
      * @param rut           RUT del socio
      * @param nombre        nombre del socio
@@ -25,14 +25,14 @@ public class SocioRegular extends Socio {
     }
 
     /**
-     * @param descuentoPase nuevo porcentaje de descuento
+     * @param descuento pase nuevo porcentaje de descuento
      */
     public void setDescuentoPase(double descuentoPase) {
         this.descuentoPase = descuentoPase;
     }
 
     /**
-     * Sobrescribe el calculo de la cuota aplicando el descuento.
+     * Sobrescribe el calculo de la cuota aplicando el descuento
      *
      * @return la cuota base menos el descuento
      */
