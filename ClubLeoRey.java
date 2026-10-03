@@ -14,7 +14,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * Sistema de Gestion de Socios y Membresias - Club Deportivo Leo Rey.
+ * Sistema de Gestion de Socios y Membresias / Club Deportivo Leo Rey
  * Interfaz grafica con AWT. Asignatura: Fundamentos de Programacion
  * Orientada a Objetos
  * Docente: Javiera Jaldin.
@@ -37,7 +37,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
     private TextArea areaReporte;
 
     /**
-     * Construye la ventana principal y registra los escuchadores.
+     * Construye la ventana principal y registra los escuchadores
      */
     public ClubLeoRey() {
         super("Club Deportivo Leo Rey - Gestion de Socios");
@@ -91,7 +91,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
         add(panelNorte, BorderLayout.NORTH);
         add(areaReporte, BorderLayout.CENTER);
 
-        // Cierra la ventana con la X (WindowAdapter de java.awt.event)
+        //cierra la ventana con la X
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 dispose();
@@ -103,7 +103,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
     }
 
     /**
-     * Atiende los eventos de los botones.
+     *atiende los eventos de los botones
      *
      * @param e evento de accion generado por el boton presionado
      */
@@ -117,7 +117,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
 
     /**
      * Valida los datos, crea el socio segun la categoria y muestra
-     * el reporte con la proyeccion de pagos.
+     * el reporte con la proyeccion de pagos
      */
     private void registrar() {
         String rut = txtRut.getText().trim();
@@ -137,13 +137,13 @@ public class ClubLeoRey extends Frame implements ActionListener {
             return;
         }
 
-        // Regla de edad minima
+        // edad minima
         if (edad < 18) {
             areaReporte.setText("Error: El socio debe ser mayor de edad.");
             return;
         }
 
-        // Regla por categoria: switch asigna descuento y acceso al spa
+        // regla por categoria: switch asigna descuento y acceso al spa
         int tipo = chTipo.getSelectedIndex() + 1; // 1 = Regular, 2 = VIP
         double descuento = 0;
         boolean spa = false;
@@ -167,7 +167,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
 
         double cuota = socio.calcularCuotaFinal();
 
-        // Beneficio con checkbox
+        // beneficio con checkbox
         if (chkCasillero.getState()) {
             cuota = cuota + MONTO_CASILLERO;
         }
@@ -186,7 +186,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
     }
 
     /**
-     * Calcula la proyeccion de pago acumulando mes a mes con un ciclo for.
+     * Calcula la proyeccion de pago acumulando mes a mes con for
      *
      * @param cuota cuota mensual final
      * @param meses cantidad de meses a proyectar (6 o 12)
@@ -205,7 +205,7 @@ public class ClubLeoRey extends Frame implements ActionListener {
     }
 
     /**
-     * Limpia los campos del formulario y el reporte.
+     * Limpia los campos del formulario y el reporte
      */
     private void limpiar() {
         txtRut.setText("");
