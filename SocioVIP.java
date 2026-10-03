@@ -6,7 +6,7 @@ public class SocioVIP extends Socio {
     private boolean accesoTotalSpa;
 
     /**
-     * Constructor que inicializa la clase padre con super(...).
+     * Constructor que inicializa la clase padre con super(...)
      *
      * @param rut            RUT del socio
      * @param nombre         nombre del socio
